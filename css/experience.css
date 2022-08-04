@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Shadows Into Light Two');
+
+/* VARIABLES */
+
+:root {
+
+    /* Pallete */
+    --primary: #D9D9D9;
+    --secondary: #1F7A3A;
+    --terciary: #6D6D6D;
+
+    /* Font Family */
+    --text-base: 'Heebo';
+    --text-alt: 'Shadows Into Light Two';
+
+    /* Content width */
+    --desktop: 1440px;
+    --tablet: 768px;
+    --mobile: 425px;
+
+    /* Spacings */
+    --space-l: 168px;
+    --space-m: 100px;
+    --space-s: 33px;
+
+}
+
+/* RESET */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    line-height: 1.5;
+    font-family: var(--text-base);
+    background-image: url(../img/fondo.svg);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+a {  
+    text-decoration: none;
+	color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+button, input, textarea, select {
+    font: inherit;
+    }
+
+img {
+    width: 100%;
+}
+
+strong {
+    font-weight: 700;
+}
+
+/* HEADER */
+
+.header {
+    background: var(--primary);
+    width: 100%;
+}
+
+.header__nav {
+    max-width: var(--desktop);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+#logo {
+    width: 25%;
+    height: auto;
+    max-width: 8rem;
+    min-width: 7rem;
+    margin: .75rem 0;
+}
+
+.header__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.header__item {
+    font-size: 1rem;
+}
+
+.header__item a {
+    display:block;
+    padding: 1rem 2rem;
+}
+
+#myStory {
+    font-family: var(--text-alt);
+}
+
+#active {
+    font-weight: bold;
+}
+
+/* MAIN */
+
+main {
+    max-width: var(--desktop);
+    margin: 0 var(--space-m) var(--space-m);
+}
+
+.tituloPagina {
+    height: var(--space-l);
+    display:flex;
+    align-items: center;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 2.5rem;
+    text-decoration: underline;
+}
+
+.experiencia {
+    display:flex;
+    gap: var(--space-s);
+}
+
+.experiencia article {
+    background-color: var(--primary);
+    border-radius: 1.5rem;
+    width: 100%;
+    height: 30rem;
+    display: grid; 
+    grid-template-columns: 2rem auto 2rem; 
+    grid-template-rows: 2rem 6.25rem 2rem 2.4rem auto 2.5rem 2rem; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      ". . ."
+      ". imagen ."
+      ". . ."
+      ". titulo ."
+      ". info ."
+      ". boton ."
+      ". . ."; 
+}
+
+.experiencia img {
+    grid-area: imagen;
+    height:100%;
+    width: auto;
+}
+
+.experiencia h2 {
+    grid-area: titulo;
+    font-size: 1.25rem;
+}
+
+.experiencia p {
+    grid-area: info;
+    font-size: 1.1rem;
+}
+
+.experiencia button {
+    grid-area: boton;
+    justify-self: end;
+    width: 9rem;
+    height: 2.5rem;
+    background-color: var(--secondary);
+    color: white;
+    font-weight: 300;
+    border-radius: 2rem;
+    text-decoration: none;
+    border: none;
+}
+
+.imagenes {
+    display:flex;
+    justify-content: space-around;
+    margin: var(--space-m) 0;
+}
+
+.imagenes img {
+    width: 21%;
+}
+
+.descripcion {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+}
+
+.descripcion article {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--primary);
+    border-radius: 2rem;
+}
+
+.descripcion h3 {
+    margin: var(--space-s) var(--space-s);
+}
+
+.descripcion div {
+    display: flex;
+}
+
+.descripcion img {
+    width: 15%;
+    margin: 0 var(--space-m) var(--space-m) var(--space-s);
+}
+
+.descripcion p {
+    margin: 0 var(--space-s) var(--space-s)
+}
+
+/* FOOTER */
+
+.footer {
+    background-color: var(--terciary);
+    color: white;
+    width: 100%;
+}
+
+.footer__list {
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    max-width: var(--desktop);
+    width: 100%;
+    margin: auto;
+}
+
+.footer__item {
+    font-size: 1rem;
+    margin: 0 1rem;
+}
+
+#logoLinkedin {
+    display: flex;
+    align-self: center;
+    margin: 0.5rem 0;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:1440px) {
+
+    .experiencia article {
+        grid-template-rows: 2rem 6.25rem 2rem 4.8rem auto 2.5rem 2rem; 
+    }
+
+}
+
+@media(max-width: 1190px) {
+    
+    .experiencia {
+        flex-direction: column;
+    }
+
+    .experiencia article {
+        height: 15rem;
+        display: grid; 
+        grid-template-columns: 2rem 13rem auto 2rem; 
+        grid-template-rows: 2rem 2.4rem auto 2.5rem 2rem; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          ". . . ."
+          ". imagen titulo ."
+          ". imagen info ."
+          ". imagen boton ."
+          ". . . ."; 
+    }
+
+    .experiencia img {
+        height: 6.25rem;
+        width: auto;
+    }
+
+}
+
+@media(max-width: 800px) {
+
+    html {
+        font-size: 12px;
+    }
+
+    :root {
+        --space-l: 100px;
+        --space-m: 33px;
+        --space-s: 33px;
+    }
+
+    .header__item {
+        font-size:  1.25rem;
+    }
+
+    .experiencia img {
+        height: 5rem;
+        width: auto;
+    }
+
+    .footer__item {
+        font-size: 1.25rem;
+    }
+
+}
+
+@media(max-width: 600px) {
+
+    .header__nav {
+        display:flex;
+        flex-direction: column;
+    }
+
+    .header__item {
+        font-size:  1.5rem;
+    }
+
+    .header__item a{
+        padding: 1rem 3rem;
+    }
+
+    .footer__item {
+        font-size: 1.5rem;
+    }
+
+}
+
+@media(max-width: 512px) {
+
+    .tituloPagina {
+        justify-content: center;
+    }
+
+    .experiencia article {
+        height: 30rem;
+        display: grid; 
+        grid-template-columns: 2rem auto 2rem; 
+        grid-template-rows: 2rem 6.25rem 2rem 2.4rem auto 2.5rem 2rem; 
+        gap: 0px 0px; 
+        grid-template-areas: 
+          ". . ."
+          ". imagen ."
+          ". . ."
+          ". titulo ."
+          ". info ."
+          ". boton ."
+          ". . ."; 
+    }
+
+    .experiencia img {
+        height:100%;
+        width: auto;
+    }
+
+    .imagenes {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .imagenes img {
+        width: 60%;
+    }
+
+    .descripcion div {
+        flex-direction: column;
+    }
+
+    .descripcion img {
+        width: 40%;
+        align-self: center;
+    }
+
+}
+
+@media(max-width: 360px) {
+
+    .header__item a{
+        padding: 1rem 2rem;
+    }
+
+    .experiencia article {
+        grid-template-rows: 2rem 6.25rem 2rem 4.8rem auto 2.5rem 2rem; 
+    }
+
+}

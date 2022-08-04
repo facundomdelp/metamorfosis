@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/contactme.css">
+    <title>Contact Me</title>
+</head>
+
+<body>
+
+    <header class="header">
+        <nav class="header__nav">
+            <img id="logo" src="../img/header/fmp.svg" alt="Logo">
+            <ul class="header__list">
+                <li class="header__item"><a href="../index.html">Home</a></li>
+                <li class="header__item"><a href="./experience.html">Experience</a></li>
+                <li class="header__item"><a href="./formation.html">Formation</a></li>
+                <li class="header__item"><a id="myStory" href="./mystory.html">My Story</a></li>
+                <li class="header__item" id="active"><a href="./contactme.html">Contact Me</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <h1>How to <span>Contact Me</span></h1> <!-- Descripción chistosa jeje -->
+        <p id="descripcion">For sure I'm being called from a bunch of companies and start ups. For the moment, just leave a message and I’ll try to answer you as soon as possible, as long I’m not busy having an interview.</p>
+
+        <div class="principal">
+
+            <section class="principal__datos">
+                <div>
+                    <img src="../img/contactme/mail.svg" alt="mail">
+                    <h2>Chat With Me</h2>
+                    <p>facundomdelp@gmail.com</p>
+                </div>
+                <div>
+                    <img src="../img/contactme/phone.svg" alt="phone">
+                    <h2>Phone</h2>
+                    <p>+54-911-3xx8-75x3</p>
+                </div>
+                <div>
+                    <img src="../img/contactme/linkedin.svg" alt="linkedin">
+                    <h2>LinkedIn</h2>
+                    <p>See the footer.</p>
+                </div>
+            </section>
+
+            <form class="principal__formulario"> <!-- formulario para contactarme vía página web -->
+                <div><input type="text" name="empresa" placeholder="Your Name"></div>
+                <div><input type="email" name="nombre" placeholder="Your E-mail"></div>
+                <div><input type="text" name="correo" placeholder="Subject"></div>
+                <div><textarea name="Message" id="mensaje" cols="30" rows="10" placeholder="Message"></textarea></div>
+                <div><a href="./contactme.html"><input type="submit" value="Submit" id="submit" onclick="alert('¡Enviado!')"></a></div>
+            </form>
+            
+        </div>
+
+    </main>
+
+    <footer class="footer">
+        <ul class="footer__list">
+            <li class="footer__item"><img id="logoLinkedin" src="../img/footer/in.svg" alt="linkedin"></li>
+            <li class="footer__item">/facundomdelp</li>
+        </ul>
+    </footer>
+
+</body>
+
+</html>
