@@ -107,6 +107,11 @@ strong {
     font-size: 1rem;
 }
 
+a:hover {
+    color: var(--secondary);
+    font-weight: bold;
+}
+
 .header__item a {
     display:block;
     padding: 1rem 2rem;
@@ -219,7 +224,7 @@ textarea {
 /* FOOTER */
 
 .footer {
-    background-color: var(--terciary);
+    background-image: linear-gradient(to right,  rgb(70, 70, 70),var(--terciary));
     color: white;
     width: 100%;
 }

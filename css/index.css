@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Shadows Into Light Two');
 
+
 /* VARIABLES */
 
 :root {
@@ -39,7 +40,8 @@ body {
     font-family: var(--text-base);
     background-image: url(../img/fondo.svg);
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
+    background-position: center;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -101,6 +103,11 @@ strong {
     font-size: 1rem;
 }
 
+a:hover {
+    color: var(--secondary);
+    font-weight: bold;
+}
+
 .header__item a {
     display:block;
     padding: 1rem 2rem;
@@ -136,8 +143,12 @@ strong {
 }
 
 .main__facu {
-    max-width: 20rem;
+    width: 20rem;
     margin: 1rem 0;
+}
+
+.main__facu:hover {
+    animation: pulse .25s 4 ease-in-out alternate;
 }
 
 .main__titulo {
@@ -154,6 +165,7 @@ strong {
 .simbolo {
     width: 3rem;
     margin-right: .5rem;
+    animation: gelatine 0.5s 3.1s infinite;
 }
 
 .main__informacion {
@@ -181,9 +193,54 @@ strong {
     align-items: center;
 }
 
+#d1 {animation: letras 1 linear .25s .05s; animation-fill-mode: both;}
+#d2 {animation: letras 1 linear .25s .10s; animation-fill-mode: both;}
+#d3 {animation: letras 1 linear .25s .15s; animation-fill-mode: both;}
+#d4 {animation: letras 1 linear .25s .20s; animation-fill-mode: both;}
+#d5 {animation: letras 1 linear .25s .25s; animation-fill-mode: both;}
+#d6 {animation: letras 1 linear .25s .30s; animation-fill-mode: both;}
+#d7 {animation: letras 1 linear .25s .35s; animation-fill-mode: both;}
+#d8 {animation: letras 1 linear .25s .40s; animation-fill-mode: both;}
+#d9 {animation: letras 1 linear .25s .45s; animation-fill-mode: both;}
+#d10 {animation: letras 1 linear .25s .50s; animation-fill-mode: both;}
+#d11 {animation: letras 1 linear .25s .55s; animation-fill-mode: both;}
+#d12 {animation: letras 1 linear .25s .60s; animation-fill-mode: both;}
+#d13 {animation: letras 1 linear .25s .65s; animation-fill-mode: both;}
+#d14 {animation: letras 1 linear .25s .70s; animation-fill-mode: both;}
+#d15 {animation: letras 1 linear .25s .75s; animation-fill-mode: both;}
+#d16 {animation: letras 1 linear .25s .80s; animation-fill-mode: both;}
+#d17 {animation: letras 1 linear .25s .85s; animation-fill-mode: both;}
+#d18 {animation: letras 1 linear .25s .90s; animation-fill-mode: both;}
+#d19 {animation: letras 1 linear .25s .95s; animation-fill-mode: both;}
+#d20 {animation: letras 1 linear .25s 1.00s; animation-fill-mode: both;}
+#d21 {animation: letras 1 linear .25s 1.05s; animation-fill-mode: both;}
+#d22 {animation: letras 1 linear .25s 1.10s; animation-fill-mode: both;}
+#d23 {animation: letras 1 linear .25s 1.15s; animation-fill-mode: both;}
+#d24 {animation: letras 1 linear .25s 1.20s; animation-fill-mode: both;}
+#d25 {animation: letras 1 linear .25s 1.25s; animation-fill-mode: both;}
+#d26 {animation: letras 1 linear .25s 1.30s; animation-fill-mode: both;}
+#d27 {animation: letras 1 linear .25s 1.35s; animation-fill-mode: both;}
+#d28 {animation: letras 1 linear .25s 1.40s; animation-fill-mode: both;}
+#d29 {animation: letras 1 linear .25s 1.45s; animation-fill-mode: both;}
+#d30 {animation: letras 1 linear .25s 1.50s; animation-fill-mode: both;}
+#d31 {animation: letras 1 linear .25s 1.55s; animation-fill-mode: both;}
+#d32 {animation: letras 1 linear .25s 1.60s; animation-fill-mode: both;}
+#d33 {animation: letras 1 linear .25s 1.65s; animation-fill-mode: both;}
+#d34 {animation: letras 1 linear .25s 1.70s; animation-fill-mode: both;}
+#d35 {animation: letras 1 linear .25s 1.75s; animation-fill-mode: both;}
+#d36 {animation: letras 1 linear .25s 1.80s; animation-fill-mode: both;}
+#d37 {animation: letras 1 linear .25s 1.85s; animation-fill-mode: both;}
+#d38 {animation: letras 1 linear .25s 1.90s; animation-fill-mode: both;}
+#d39 {animation: letras 1 linear .25s 1.90s; animation-fill-mode: both;}
+#d40 {animation: letras 1 ease-in .5s 2.00s; animation-fill-mode: both;}
+#d41 {animation: letras2 1 ease-in .5s 2.50s; animation-fill-mode: both;}
+#d42 {animation: letras3 1 ease-in .5s 3.00s; animation-fill-mode: both;}
+
+
 .icono {
     width: 1.25rem;
     margin-right: 1rem;
+    animation: iconitos infinite ease 1.5s 3.1s;
 }
 
 .main__informacion__profesion {
@@ -203,13 +260,14 @@ strong {
 }
 
 .main__informacion__idiomas img {
+    padding-top: 10%;
     width: 3rem;
 }
 
 /* FOOTER */
 
 .footer {
-    background-color: var(--terciary);
+    background-image: linear-gradient(to right,  rgb(70, 70, 70),var(--terciary));
     color: white;
     width: 100%;
 }
@@ -232,6 +290,61 @@ strong {
     display: flex;
     align-self: center;
     margin: 0.5rem 0;
+}
+
+/* ANIMACIONES */
+
+@keyframes letras {
+    0% {transform: translateY(-500px)}
+    100% {transform: translateY(0)}
+}
+
+@keyframes letras2 {
+    0% {
+        opacity: 0;
+        transform: translateX(-500px);
+      }
+      60% {
+        opacity: 1;
+        transform: translateX(30px);
+      }
+      80% { transform: translateX(-10px); }
+      100% { transform: translateX(0); }
+}
+
+@keyframes letras3 {
+    0% {
+        opacity: 0;
+        transform: translateX(500px);
+      }
+      60% {
+        opacity: 1;
+        transform: translateX(-30px);
+      }
+      80% { transform: translateX(10px); }
+      100% { transform: translateX(0); }
+}
+
+@keyframes iconitos {
+    70% { transform:translateY(0%); }
+    80% { transform:translateY(-40%); }
+    90% { transform:translateY(0%); }
+    95% { transform:translateY(-24%); }
+    97% { transform:translateY(0%); }
+    99% { transform:translateY(-18%); }
+    100% { transform:translateY(0); }
+}
+
+@keyframes gelatine {
+    from, to { transform: scale(1, 1); }
+    25% { transform: scale(0.9, 1.1); }
+    50% { transform: scale(1.1, 0.9); }
+    75% { transform: scale(0.95, 1.05); }
+  }
+
+@keyframes pulse {
+    from { transform: scale(1); }
+    to { transform: scale(1.1); }
 }
 
 /* RESPONSIVE */
