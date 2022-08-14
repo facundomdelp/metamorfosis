@@ -44,6 +44,7 @@ body {
     font-family: var(--text-base);
     background-image: url(../img/fondo.svg);
     background-repeat: no-repeat;
+    background-size: contain;
     background-position-x: center;
     display: flex;
     flex-direction: column;
@@ -83,6 +84,7 @@ strong {
 .header__nav {
     max-width: var(--desktop);
     width: 100%;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     margin: auto;
@@ -105,16 +107,17 @@ strong {
 
 .header__item {
     font-size: 1rem;
+    width: 8rem;
+    text-align: center;
 }
 
-a:hover {
+.header a:hover {
     color: var(--secondary);
     font-weight: bold;
 }
 
 .header__item a {
-    display:block;
-    padding: 1rem 2rem;
+    color: var(--secondary);
 }
 
 #myStory {
@@ -123,12 +126,26 @@ a:hover {
 
 #active {
     font-weight: bold;
+    display: inline-block;
+    position: relative;
+}
+
+#active::before {
+    content: '.';
+    font-weight: 900;
+    color: var(--secondary);
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
 }
 
 /* MAIN */
 
 main {
-    margin: var(--space-m);
+    margin: var(--space-s);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -144,7 +161,7 @@ h1 span {
 
 #descripcion{
     text-align: center;
-    font-size: 1.15rem;
+    font-size: 1.15em;
 }
 
 main img {
@@ -240,7 +257,7 @@ textarea {
 
 .footer__item {
     font-size: 1rem;
-    margin: 0 1rem;
+    padding: 0 1rem;
 }
 
 #logoLinkedin {
@@ -251,19 +268,7 @@ textarea {
 
 /* RESPONSIVE */
 
-@media(max-width: 1024px) {
-
-    main {
-        margin: var(--space-s);
-    }
-
-}
-
 @media(max-width: 768px) {
-
-    .header__item {
-        font-size:  1.25rem;
-    }
 
     .principal {
         width: 100%;
@@ -287,44 +292,12 @@ textarea {
         justify-self: end;
     }
 
-    .footer__item {
-        font-size: 1.25rem;
-    }
 }
 
-@media(max-width: 425px) {
+@media(max-width: 576px) {
 
-    html {
-        font-size: 14px;
-    }
-
-    .header__nav {
-        display:flex;
-        flex-direction: column;
-    }
-
-    .header__item {
-        font-size:  1.5rem;
-    }
-
-    .header__item a{
-        padding: 1rem 3rem;
-    }
-
-    .footer__item {
-        font-size: 1.5rem;
-    }
-
-}
-
-@media(max-width: 320px) {
-
-    html {
+    main {
         font-size: 12px;
-    }
-
-    .header__item a{
-        padding: 1rem 2rem;
     }
 
     .principal__formulario {

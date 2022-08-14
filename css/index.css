@@ -45,7 +45,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    align-items: center;
 }
 
 a {  
@@ -79,6 +78,7 @@ strong {
 .header__nav {
     max-width: var(--desktop);
     width: 100%;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     margin: auto;
@@ -101,16 +101,17 @@ strong {
 
 .header__item {
     font-size: 1rem;
+    width: 8rem;
+    text-align: center;
 }
 
-a:hover {
+.header a:hover {
     color: var(--secondary);
     font-weight: bold;
 }
 
 .header__item a {
-    display:block;
-    padding: 1rem 2rem;
+    color: var(--secondary);
 }
 
 #myStory {
@@ -119,27 +120,37 @@ a:hover {
 
 #active {
     font-weight: bold;
+    display: inline-block;
+    position: relative;
+}
+
+#active::before {
+    content: '.';
+    font-weight: 900;
+    color: var(--secondary);
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
 }
 
 /* MAIN */
 
 .main {
     max-width: var(--desktop);
-    display: grid; 
-    grid-template-columns: 1.5fr 1.5fr; 
-    grid-template-rows: 3fr; 
-    gap: 0 0;
-    grid-template-areas: 
-    "main__principal main__informacion"
+    margin: auto;
+    display: flex;
+    gap: 5%;
+    justify-content: center;
 }
 
 .main__principal {
-    grid-area: main__principal;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
-    margin-right: 3rem;
 }
 
 .main__facu {
@@ -169,25 +180,23 @@ a:hover {
 }
 
 .main__informacion {
-    grid-area: main__informacion;
+    width: 24rem;
     display:flex;
     flex-direction: column;
     align-items:center;
     justify-content: space-evenly;
     margin-bottom: 2rem;
-    margin-left: 3rem;
 }
 
 .main__datosPersonales {
-    text-align: right;
-    margin: 10% 0%;
     display:flex;
     flex-direction:column;
     justify-content: space-between;
+    padding-left: 0;
 }
 
 .main__datosPersonales__item {
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin: 3% 0;
     display: flex;
     align-items: center;
@@ -286,17 +295,27 @@ a:hover {
     margin: 0 1rem;
 }
 
+.footer__item a:hover {
+    color: inherit;
+}
+
 #logoLinkedin {
     display: flex;
     align-self: center;
-    margin: 0.5rem 0;
+    padding: 0.5rem 0;
 }
 
 /* ANIMACIONES */
 
 @keyframes letras {
-    0% {transform: translateY(-500px)}
-    100% {transform: translateY(0)}
+    0% {
+        opacity: 0;
+        transform: translateY(-500px);
+        }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+        }
 }
 
 @keyframes letras2 {
@@ -349,54 +368,8 @@ a:hover {
 
 /* RESPONSIVE */
 
-@media(max-width: 1024px) {
+@media(max-width: 768px) {
     
-    html{
-        font-size: 16px;
-    }
-
-}
-
-@media(max-width: 800px) {
-    
-    html{
-        font-size: 12px;
-    }
-
-    .header__item {
-        font-size:  1.25rem;
-    }
-
-    .footer__item {
-        font-size: 1.25rem;
-    }
-
-}
-
-@media(max-width: 600px) {
-    
-    html{
-        font-size: 10px;
-    }
-
-    body {
-        background-repeat: initial;
-        background-size: contain;
-    }
-
-    .header__nav {
-        display:flex;
-        flex-direction: column;
-    }
-
-    .header__item {
-        font-size:  1.5rem;
-    }
-
-    .header__item a{
-        padding: 1rem 3rem;
-    }
-
     .main {
         display: flex;
         flex-direction: column;
@@ -408,18 +381,7 @@ a:hover {
 
     .main__informacion {
         margin-left: 0;
-    }
-
-    .footer__item {
-        font-size: 1.5rem;
-    }
-
-}
-
-@media(max-width: 320px) {
-
-    .header__item a{
-        padding: 1rem 2rem;
+        width: auto;
     }
 
 }

@@ -80,6 +80,7 @@ strong {
 .header__nav {
     max-width: var(--desktop);
     width: 100%;
+    padding: 0;
     display: flex;
     justify-content: space-between;
     margin: auto;
@@ -102,16 +103,17 @@ strong {
 
 .header__item {
     font-size: 1rem;
+    width: 8rem;
+    text-align: center;
 }
 
-a:hover {
+.header a:hover {
     color: var(--secondary);
     font-weight: bold;
 }
 
 .header__item a {
-    display:block;
-    padding: 1rem 2rem;
+    color: var(--secondary);
 }
 
 #myStory {
@@ -120,6 +122,20 @@ a:hover {
 
 #active {
     font-weight: bold;
+    display: inline-block;
+    position: relative;
+}
+
+#active::before {
+    content: '.';
+    font-weight: 900;
+    color: var(--secondary);
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    text-align: center;
+    width: 100%;
 }
 
 /* MAIN */
@@ -253,7 +269,7 @@ h1 {
 
 .footer__item {
     font-size: 1rem;
-    margin: 0 1rem;
+    padding: 0 1rem;
 }
 
 #logoLinkedin {
@@ -301,48 +317,15 @@ h1 {
 
 @media(max-width: 800px) {
 
-    html {
-        font-size: 12px;
-    }
-
     :root {
         --space-l: 100px;
         --space-m: 33px;
         --space-s: 33px;
     }
 
-    .header__item {
-        font-size:  1.25rem;
-    }
-
     .experiencia img {
         height: 5rem;
         width: auto;
-    }
-
-    .footer__item {
-        font-size: 1.25rem;
-    }
-
-}
-
-@media(max-width: 600px) {
-
-    .header__nav {
-        display:flex;
-        flex-direction: column;
-    }
-
-    .header__item {
-        font-size:  1.5rem;
-    }
-
-    .header__item a{
-        padding: 1rem 3rem;
-    }
-
-    .footer__item {
-        font-size: 1.5rem;
     }
 
 }
@@ -395,10 +378,6 @@ h1 {
 }
 
 @media(max-width: 360px) {
-
-    .header__item a{
-        padding: 1rem 2rem;
-    }
 
     .experiencia article {
         grid-template-rows: 2rem 6.25rem 2rem 4.8rem auto 2.5rem 2rem; 
