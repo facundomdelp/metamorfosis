@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../img/favicon.png" type="image/x-icon">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/experience.css">
     <title>Experience</title>
@@ -12,7 +13,7 @@
 
 <body>
 
-    <header class="header">
+    <header class="header" id="header">
 
         <nav class="header__nav navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -36,6 +37,8 @@
 
     <main>
 
+        <a href="#header"><div class="subir"><img src="../img/subir.svg" alt="flecha para subir"></div></a>
+
         <div class="tituloPagina"><h1>Experience</h1></div>
 
         <section class="experiencia"> <!-- Experiencia laboral/profesional de Facu -->
@@ -43,19 +46,19 @@
                 <img src="../img/experience/fabrica.svg" alt="fabrica">
                 <h2>Pilkington Automotive Argentina</h2>
                 <p>November 2015 - present</p>
-                <button><a href="#pilkington">Know More</a></button>
+                <a href="#pilkington"><button>Know More</button></a>
             </article>
             <article>
                 <img src="../img/experience/colegio.svg" alt="colegio">
                 <h2>Colegio Santa Inés</h2>
                 <p>2013</p>
-                <button><a href="#santaInes">Know More</a></button>
+                <a href="#santaInes"><button>Know More</button></a>
             </article>
             <article>
                 <img src="../img/experience/montania.svg" alt="montaña">
                 <h2>Northstar California Resort</h2>
                 <p>December 2012 - April 2013</p>
-                <button><a href="#northstar">Know More</a></button>
+                <a href="#northstar"><button>Know More</button></a>
             </article>
         </section>
 
@@ -66,7 +69,7 @@
         </section>
 
         <section class="descripcion"> <!-- Descripción de la experiencia laboral/profesional de Facu -->
-            <article>
+            <article data-aos="fade-right">
                 <h3 id="pilkington">Pilkington Automotive Argentina</h2>
                 <div>
                 <img src="../img/experience/calidad.svg" alt="calidad">
@@ -80,7 +83,7 @@
                 </p>
                 </div>
             </article>
-            <article>
+            <article data-aos="flip-left">
                 <h3 id="santaInes">Colegio Santa Inés</h2>
                 <div>
                 <img src="../img/experience/pizarron.svg" alt="pizarron">
@@ -93,7 +96,7 @@
                 </p>
                 </div>
             </article>
-            <article>
+            <article data-aos="zoom-in">
                 <h3 id="northstar">Northstar California Resort</h2>
                 <div>
                 <img src="../img/experience/esqui.svg" alt="esqui">
@@ -106,6 +109,12 @@
                 </p>
                 </div>
             </article>
+        </section>
+
+        <section class="imagenes"> <!-- Imágenes descriptivas -->
+            <img src="../img/experience/oficina.svg" alt="oficina">
+            <img src="../img/experience/trabajo.svg" alt="trabajo">
+            <img src="../img/experience/trafico.svg" alt="trafico">
         </section>
 
         <!--<section>
@@ -123,6 +132,8 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 
 </body>
 </html>
