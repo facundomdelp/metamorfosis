@@ -243,6 +243,10 @@ h1 {
     padding: 0 1rem;
 }
 
+.footer__item a:hover {
+    color: inherit;
+}
+
 #logoLinkedin {
     display: flex;
     align-self: center;

@@ -147,7 +147,7 @@ main {
 
 .tituloPagina {
     height: var(--space-l);
-    display:flex;
+    display: flex;
     align-items: center;
 }
 
@@ -169,7 +169,7 @@ h1 {
     height: 30rem;
     display: grid; 
     grid-template-columns: 2rem auto 2rem; 
-    grid-template-rows: 2rem 6.25rem 2rem 2.4rem auto 2.5rem 2rem; 
+    grid-template-rows: 2rem 6.25rem 2rem max-content auto 2.5rem 2rem; 
     gap: 0px 0px; 
     grid-template-areas: 
       ". . ."
@@ -210,6 +210,11 @@ h1 {
     border: none;
 }
 
+.experiencia a:hover {
+    color: inherit;
+    font-weight: bolder;
+}
+
 .imagenes {
     display:flex;
     justify-content: space-around;
@@ -243,11 +248,12 @@ h1 {
 
 .descripcion img {
     width: 15%;
-    margin: 0 var(--space-m) var(--space-m) var(--space-s);
+    align-self: flex-start;
+    margin: 0 var(--space-s) var(--space-m) var(--space-s);
 }
 
 .descripcion p {
-    margin: 0 var(--space-s) var(--space-s)
+    margin: 0 var(--space-s) var(--space-s) 0;
 }
 
 /* FOOTER */
@@ -272,6 +278,10 @@ h1 {
     padding: 0 1rem;
 }
 
+.footer__item a:hover {
+    color: inherit;
+}
+
 #logoLinkedin {
     display: flex;
     align-self: center;
@@ -279,14 +289,6 @@ h1 {
 }
 
 /* RESPONSIVE */
-
-@media(max-width:1440px) {
-
-    .experiencia article {
-        grid-template-rows: 2rem 6.25rem 2rem 4.8rem auto 2.5rem 2rem; 
-    }
-
-}
 
 @media(max-width: 1190px) {
     
@@ -298,7 +300,7 @@ h1 {
         height: 15rem;
         display: grid; 
         grid-template-columns: 2rem 13rem auto 2rem; 
-        grid-template-rows: 2rem 2.4rem auto 2.5rem 2rem; 
+        grid-template-rows: 2rem max-content auto 2.5rem 2rem; 
         gap: 0px 0px; 
         grid-template-areas: 
           ". . . ."
@@ -330,7 +332,7 @@ h1 {
 
 }
 
-@media(max-width: 512px) {
+@media(max-width: 576px) {
 
     .tituloPagina {
         justify-content: center;
@@ -340,7 +342,7 @@ h1 {
         height: 30rem;
         display: grid; 
         grid-template-columns: 2rem auto 2rem; 
-        grid-template-rows: 2rem 6.25rem 2rem 2.4rem auto 2.5rem 2rem; 
+        grid-template-rows: 2rem 6.25rem 2rem max-content auto 2.5rem 2rem; 
         gap: 0px 0px; 
         grid-template-areas: 
           ". . ."
@@ -373,14 +375,6 @@ h1 {
     .descripcion img {
         width: 40%;
         align-self: center;
-    }
-
-}
-
-@media(max-width: 360px) {
-
-    .experiencia article {
-        grid-template-rows: 2rem 6.25rem 2rem 4.8rem auto 2.5rem 2rem; 
     }
 
 }
