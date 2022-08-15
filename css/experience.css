@@ -271,6 +271,7 @@ h1 {
 
 .descripcion p {
     margin: 0 var(--space-s) var(--space-s) 0;
+    text-align: justify;
 }
 
 /* FOOTER */
