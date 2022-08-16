@@ -265,10 +265,6 @@ h1 {
 
 @media(max-width: 1200px) {
 
-    html {
-        font-size: 14px;
-    }
-
     main {
         margin: 0 var(--space-m) var(--space-s);
     }
@@ -277,10 +273,6 @@ h1 {
 
 
 @media(max-width: 800px) {
-
-    html {
-        font-size: 12px;
-    }
 
     .grillaDesktop {
         display: none;
@@ -405,10 +397,6 @@ h1 {
 
 @media(max-width: 425px) {
 
-    html{
-        font-size: 10px;
-    }
-        
     main {
         margin: 0 var(--space-s) var(--space-s);
     }
