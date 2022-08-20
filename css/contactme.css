@@ -39,19 +39,8 @@ html {
 }
 
 body {
-    height: 100vh;
     line-height: 1.5;
-    font-family: var(--text-base);
-    background-image: url(../img/fondo.svg);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position-x: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
 }
-
 
 a {  
     text-decoration: none;
@@ -72,6 +61,21 @@ img {
 
 strong {
     font-weight: 700;
+}
+
+/* BODY */
+
+body {
+    height: 100vh;
+    font-family: var(--text-base);
+    background-image: url(../img/fondo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 }
 
 /* HEADER */

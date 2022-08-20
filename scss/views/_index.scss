@@ -1,0 +1,173 @@
+/* BODY */
+
+body {
+    height: 100vh;
+    width: 100%;
+    font-family: var(--text-base);
+    background-image: url(../img/fondo.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* MAIN */
+
+main {
+    max-width: var(--desktop);
+    margin: auto;
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+
+    .main__principal {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+
+        img {
+            width: 20rem;
+            margin: 1rem 0;
+
+            &:hover {
+                animation: pulse .25s 4 ease-in-out alternate;
+            }
+        }
+
+        h1 {
+            font-weight: bold;
+            font-size: 2rem;
+        }
+
+        ul {
+            padding-left: 0;
+
+            li {
+                font-size: 1.5rem;
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 3rem;
+                    margin: 0 .5rem 0 0;
+                    animation: gelatine 0.5s 3.1s infinite;
+                }
+            }
+        }
+    }
+
+    .main__informacion {
+        width: 24rem;
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        justify-content: space-evenly;
+        margin-bottom: 2rem;
+
+        ul {
+            display:flex;
+            flex-direction:column;
+            justify-content: space-between;
+            padding-left: 0;
+
+            li {
+                font-size: 1rem;
+                margin: 3% 0;
+                display: flex;
+                align-items: center;
+
+                img {
+                    width: 1.25rem;
+                    margin-right: 1rem;
+                    animation: iconitos infinite ease 1.5s 3.1s;
+                }
+
+                #d1 {animation: letras 1 linear .25s .05s; animation-fill-mode: both;}
+                #d2 {animation: letras 1 linear .25s .10s; animation-fill-mode: both;}
+                #d3 {animation: letras 1 linear .25s .15s; animation-fill-mode: both;}
+                #d4 {animation: letras 1 linear .25s .20s; animation-fill-mode: both;}
+                #d5 {animation: letras 1 linear .25s .25s; animation-fill-mode: both;}
+                #d6 {animation: letras 1 linear .25s .30s; animation-fill-mode: both;}
+                #d7 {animation: letras 1 linear .25s .35s; animation-fill-mode: both;}
+                #d8 {animation: letras 1 linear .25s .40s; animation-fill-mode: both;}
+                #d9 {animation: letras 1 linear .25s .45s; animation-fill-mode: both;}
+                #d10 {animation: letras 1 linear .25s .50s; animation-fill-mode: both;}
+                #d11 {animation: letras 1 linear .25s .55s; animation-fill-mode: both;}
+                #d12 {animation: letras 1 linear .25s .60s; animation-fill-mode: both;}
+                #d13 {animation: letras 1 linear .25s .65s; animation-fill-mode: both;}
+                #d14 {animation: letras 1 linear .25s .70s; animation-fill-mode: both;}
+                #d15 {animation: letras 1 linear .25s .75s; animation-fill-mode: both;}
+                #d16 {animation: letras 1 linear .25s .80s; animation-fill-mode: both;}
+                #d17 {animation: letras 1 linear .25s .85s; animation-fill-mode: both;}
+                #d18 {animation: letras 1 linear .25s .90s; animation-fill-mode: both;}
+                #d19 {animation: letras 1 linear .25s .95s; animation-fill-mode: both;}
+                #d20 {animation: letras 1 linear .25s 1.00s; animation-fill-mode: both;}
+                #d21 {animation: letras 1 linear .25s 1.05s; animation-fill-mode: both;}
+                #d22 {animation: letras 1 linear .25s 1.10s; animation-fill-mode: both;}
+                #d23 {animation: letras 1 linear .25s 1.15s; animation-fill-mode: both;}
+                #d24 {animation: letras 1 linear .25s 1.20s; animation-fill-mode: both;}
+                #d25 {animation: letras 1 linear .25s 1.25s; animation-fill-mode: both;}
+                #d26 {animation: letras 1 linear .25s 1.30s; animation-fill-mode: both;}
+                #d27 {animation: letras 1 linear .25s 1.35s; animation-fill-mode: both;}
+                #d28 {animation: letras 1 linear .25s 1.40s; animation-fill-mode: both;}
+                #d29 {animation: letras 1 linear .25s 1.45s; animation-fill-mode: both;}
+                #d30 {animation: letras 1 linear .25s 1.50s; animation-fill-mode: both;}
+                #d31 {animation: letras 1 linear .25s 1.55s; animation-fill-mode: both;}
+                #d32 {animation: letras 1 linear .25s 1.60s; animation-fill-mode: both;}
+                #d33 {animation: letras 1 linear .25s 1.65s; animation-fill-mode: both;}
+                #d34 {animation: letras 1 linear .25s 1.70s; animation-fill-mode: both;}
+                #d35 {animation: letras 1 linear .25s 1.75s; animation-fill-mode: both;}
+                #d36 {animation: letras 1 linear .25s 1.80s; animation-fill-mode: both;}
+                #d37 {animation: letras 1 linear .25s 1.85s; animation-fill-mode: both;}
+                #d38 {animation: letras 1 linear .25s 1.90s; animation-fill-mode: both;}
+                #d39 {animation: letras 1 linear .25s 1.90s; animation-fill-mode: both;}
+                #d40 {animation: letras 1 ease-in .5s 2.00s; animation-fill-mode: both;}
+                #d41 {animation: letras2 1 ease-in .5s 2.50s; animation-fill-mode: both;}
+                #d42 {animation: letras3 1 ease-in .5s 3.00s; animation-fill-mode: both;}
+            }
+        }
+        .main__informacion__profesion {
+            width:100%;
+            display:flex;
+            justify-content: space-evenly;
+
+            img {
+                width:6rem;
+            }
+        }
+
+        .main__informacion__idiomas {
+            width:100%;
+            display:flex;
+            justify-content: space-evenly;
+
+            img {
+                padding-top: 10%;
+                width: 3rem;
+            }
+        }
+    }
+}
+
+/* RESPONSIVE */
+
+@media(max-width: 768px) {
+    
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main__principal {
+        margin-right: 0;
+    }
+
+    .main__informacion {
+        margin-left: 0;
+        width: auto;
+    }
+
+}

@@ -1,3 +1,15 @@
-.probando {
-    color: white;
-}
+/* FUENTES */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Shadows Into Light Two');
+
+/* MISC */
+@import './misc/variables';
+@import './misc/normalize';
+@import './misc/animaciones';
+
+/* PARTIALS */
+@import './partials/header';
+@import './partials/footer';
+
+/* VIEWS */
+@import './views/index';
