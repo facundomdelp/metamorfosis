@@ -4,6 +4,7 @@
 
 /* MISC */
 @import './misc/variables';
+@import './misc/mixins';
 @import './misc/normalize';
 @import './misc/animaciones';
 
@@ -13,3 +14,4 @@
 
 /* VIEWS */
 @import './views/index';
+@import './views/experience';

@@ -1,13 +1,12 @@
 header {
-    background: var(--primary);
+    background: map-get($pallete, primary);
     width: 100%;
 
     .header__nav {
-        max-width: var(--desktop);
+        max-width: 1440px;
         width: 100%;
         padding: 0;
-        display: flex;
-        justify-content: space-between;
+        @include flex(row, space-between, flex-start, 0);
         margin: auto;
 
         img {
@@ -19,9 +18,7 @@ header {
         }
 
         ul {
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            @include flex(row, center, center, 0);
             flex-wrap: wrap;
 
             li {
@@ -30,16 +27,16 @@ header {
                 text-align: center;
 
                 a {
-                    color: var(--secondary);
+                    color: map-get($pallete, secondary);
 
                     &:hover {
-                        color: var(--secondary);
+                        color: map-get($pallete, secondary);
                         font-weight: bold;
                     }
                 }
 
                 #myStory {
-                    font-family: var(--text-alt);
+                    font-family: map-get($text, alt);
                 }
             }
 
@@ -51,7 +48,7 @@ header {
                 &::before {
                     content: '.';
                     font-weight: 900;
-                    color: var(--secondary);
+                    color: map-get($pallete, secondary);
                     display: inline-block;
                     position: absolute;
                     bottom: 0;

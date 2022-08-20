@@ -1,17 +1,23 @@
+/* Pallete */
+
+$pallete: (
+    primary: #D9D9D9,
+    secondary: #1f7a3a,
+    terciary: #6D6D6D,
+);
+
+/* Font Family */
+
+$text: (
+    base: 'Heebo',
+    alt: 'Shadows Into Light Two',
+);
+
 :root {
 
-    /* Pallete */
-    --primary: #D9D9D9;
-    --secondary: #1F7A3A;
-    --terciary: #6D6D6D;
+    /* Spacings */
 
-    /* Font Family */
-    --text-base: 'Heebo';
-    --text-alt: 'Shadows Into Light Two';
-
-    /* Content width */
-    --desktop: 1440px;
-    --tablet: 768px;
-    --mobile: 425px;
-
+    --space-l: 168px;
+    --space-m: 100px;
+    --space-s: 33px;
 }

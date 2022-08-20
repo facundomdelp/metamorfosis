@@ -14,11 +14,6 @@
     --text-base: 'Heebo';
     --text-alt: 'Shadows Into Light Two';
 
-    /* Content width */
-    --desktop: 1440px;
-    --tablet: 768px;
-    --mobile: 425px;
-
     /* Spacings */
     --space-l: 168px;
     --space-m: 100px;
@@ -86,7 +81,7 @@ body {
 }
 
 .header__nav {
-    max-width: var(--desktop);
+    max-width: 1440px;
     width: 100%;
     padding: 0;
     display: flex;
@@ -254,7 +249,7 @@ footer ul {
     display: flex;
     align-items: center;
     justify-content: left;
-    max-width: var(--desktop);
+    max-width: 1440px;
     width: 100%;
     margin: auto;
 }

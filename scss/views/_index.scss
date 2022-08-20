@@ -1,31 +1,27 @@
 /* BODY */
 
-body {
+.body__index {
     height: 100vh;
     width: 100%;
-    font-family: var(--text-base);
+    font-family: map-get($text, base);
     background-image: url(../img/fondo.svg);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    @include flex(column, space-between, flex-start, 0);
 }
 
 /* MAIN */
 
-main {
-    max-width: var(--desktop);
+.main__index {
+    max-width: 1440px;
     margin: auto;
     display: flex;
     gap: 5%;
     justify-content: center;
 
     .main__principal {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+        @include flex(column, flex-start, center, 0);
         text-align: center;
 
         img {
@@ -60,17 +56,14 @@ main {
     }
 
     .main__informacion {
+        @extend .main__principal;
+        text-align: left;
         width: 24rem;
-        display:flex;
-        flex-direction: column;
-        align-items:center;
         justify-content: space-evenly;
         margin-bottom: 2rem;
 
         ul {
-            display:flex;
-            flex-direction:column;
-            justify-content: space-between;
+            @include flex(column, space-between, flex-start, 0);
             padding-left: 0;
 
             li {
@@ -131,8 +124,7 @@ main {
         }
         .main__informacion__profesion {
             width:100%;
-            display:flex;
-            justify-content: space-evenly;
+            @include flex(row, space-evenly, flex-start, 0);
 
             img {
                 width:6rem;
@@ -141,8 +133,7 @@ main {
 
         .main__informacion__idiomas {
             width:100%;
-            display:flex;
-            justify-content: space-evenly;
+            @include flex(row, space-evenly, flex-start, 0);
 
             img {
                 padding-top: 10%;
@@ -156,18 +147,16 @@ main {
 
 @media(max-width: 768px) {
     
-    main {
-        display: flex;
-        flex-direction: column;
-    }
+    .main__index {
+        @include flex(column, flex-start, flex-start, 0);
 
-    .main__principal {
-        margin-right: 0;
-    }
+        .main__principal {
+            margin-right: 0;
+        }
 
-    .main__informacion {
-        margin-left: 0;
-        width: auto;
+        .main__informacion {
+            margin-left: 0;
+            width: auto;
+        }
     }
-
 }

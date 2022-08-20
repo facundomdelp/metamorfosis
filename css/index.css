@@ -2,18 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Shadows Into Light Two");
 /* MISC */
+/* Pallete */
+/* Font Family */
 :root {
-  /* Pallete */
-  --primary: #D9D9D9;
-  --secondary: #1F7A3A;
-  --terciary: #6D6D6D;
-  /* Font Family */
-  --text-base: 'Heebo';
-  --text-alt: 'Shadows Into Light Two';
-  /* Content width */
-  --desktop: 1440px;
-  --tablet: 768px;
-  --mobile: 425px; }
+  /* Spacings */
+  --space-l: 168px;
+  --space-m: 100px;
+  --space-s: 33px; }
 
 * {
   margin: 0;
@@ -109,14 +104,17 @@ strong {
 
 /* PARTIALS */
 header {
-  background: var(--primary);
+  background: #D9D9D9;
   width: 100%; }
   header .header__nav {
-    max-width: var(--desktop);
+    max-width: 1440px;
     width: 100%;
     padding: 0;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
+    align-items: flex-start;
+    gap: 0;
     margin: auto; }
     header .header__nav img {
       width: 25%;
@@ -126,20 +124,22 @@ header {
       margin: .75rem 0; }
     header .header__nav ul {
       display: flex;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
+      gap: 0;
       flex-wrap: wrap; }
       header .header__nav ul li {
         font-size: 1rem;
         width: 8rem;
         text-align: center; }
         header .header__nav ul li a {
-          color: var(--secondary); }
+          color: #1f7a3a; }
           header .header__nav ul li a:hover {
-            color: var(--secondary);
+            color: #1f7a3a;
             font-weight: bold; }
         header .header__nav ul li #myStory {
-          font-family: var(--text-alt); }
+          font-family: "Shadows Into Light Two"; }
       header .header__nav ul #active {
         font-weight: bold;
         display: inline-block;
@@ -147,7 +147,7 @@ header {
         header .header__nav ul #active::before {
           content: '.';
           font-weight: 900;
-          color: var(--secondary);
+          color: #1f7a3a;
           display: inline-block;
           position: absolute;
           bottom: 0;
@@ -156,14 +156,16 @@ header {
           width: 100%; }
 
 footer {
-  background-image: linear-gradient(to right, #464646, var(--terciary));
+  background-image: linear-gradient(to right, #464646, #6D6D6D);
   color: white;
   width: 100%; }
   footer ul {
     display: flex;
-    align-items: center;
+    flex-direction: row;
     justify-content: left;
-    max-width: var(--desktop);
+    align-items: center;
+    gap: 0;
+    max-width: 1440px;
     width: 100%;
     margin: auto; }
     footer ul li {
@@ -172,222 +174,409 @@ footer {
       footer ul li a:hover {
         color: inherit; }
       footer ul li #logoLinkedin {
-        display: flex;
-        align-self: center;
         padding: 0.5rem 0; }
 
 /* VIEWS */
 /* BODY */
-body {
+.body__index {
   height: 100vh;
   width: 100%;
-  font-family: var(--text-base);
+  font-family: "Heebo";
   background-image: url(../img/fondo.svg);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0; }
 
 /* MAIN */
-main {
-  max-width: var(--desktop);
+.main__index {
+  max-width: 1440px;
   margin: auto;
   display: flex;
   gap: 5%;
   justify-content: center; }
-  main .main__principal {
+  .main__index .main__principal, .main__index .main__informacion {
     display: flex;
     flex-direction: column;
+    justify-content: flex-start;
     align-items: center;
+    gap: 0;
     text-align: center; }
-    main .main__principal img {
+    .main__index .main__principal img, .main__index .main__informacion img {
       width: 20rem;
       margin: 1rem 0; }
-      main .main__principal img:hover {
+      .main__index .main__principal img:hover, .main__index .main__informacion img:hover {
         animation: pulse .25s 4 ease-in-out alternate; }
-    main .main__principal h1 {
+    .main__index .main__principal h1, .main__index .main__informacion h1 {
       font-weight: bold;
       font-size: 2rem; }
-    main .main__principal ul {
+    .main__index .main__principal ul, .main__index .main__informacion ul {
       padding-left: 0; }
-      main .main__principal ul li {
+      .main__index .main__principal ul li, .main__index .main__informacion ul li {
         font-size: 1.5rem;
         display: flex;
         align-items: center; }
-        main .main__principal ul li img {
+        .main__index .main__principal ul li img, .main__index .main__informacion ul li img {
           width: 3rem;
           margin: 0 .5rem 0 0;
           animation: gelatine 0.5s 3.1s infinite; }
-  main .main__informacion {
+  .main__index .main__informacion {
+    text-align: left;
     width: 24rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: space-evenly;
     margin-bottom: 2rem; }
-    main .main__informacion ul {
+    .main__index .main__informacion ul {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      align-items: flex-start;
+      gap: 0;
       padding-left: 0; }
-      main .main__informacion ul li {
+      .main__index .main__informacion ul li {
         font-size: 1rem;
         margin: 3% 0;
         display: flex;
         align-items: center; }
-        main .main__informacion ul li img {
+        .main__index .main__informacion ul li img {
           width: 1.25rem;
           margin-right: 1rem;
           animation: iconitos infinite ease 1.5s 3.1s; }
-        main .main__informacion ul li #d1 {
+        .main__index .main__informacion ul li #d1 {
           animation: letras 1 linear .25s .05s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d2 {
+        .main__index .main__informacion ul li #d2 {
           animation: letras 1 linear .25s .10s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d3 {
+        .main__index .main__informacion ul li #d3 {
           animation: letras 1 linear .25s .15s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d4 {
+        .main__index .main__informacion ul li #d4 {
           animation: letras 1 linear .25s .20s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d5 {
+        .main__index .main__informacion ul li #d5 {
           animation: letras 1 linear .25s .25s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d6 {
+        .main__index .main__informacion ul li #d6 {
           animation: letras 1 linear .25s .30s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d7 {
+        .main__index .main__informacion ul li #d7 {
           animation: letras 1 linear .25s .35s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d8 {
+        .main__index .main__informacion ul li #d8 {
           animation: letras 1 linear .25s .40s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d9 {
+        .main__index .main__informacion ul li #d9 {
           animation: letras 1 linear .25s .45s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d10 {
+        .main__index .main__informacion ul li #d10 {
           animation: letras 1 linear .25s .50s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d11 {
+        .main__index .main__informacion ul li #d11 {
           animation: letras 1 linear .25s .55s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d12 {
+        .main__index .main__informacion ul li #d12 {
           animation: letras 1 linear .25s .60s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d13 {
+        .main__index .main__informacion ul li #d13 {
           animation: letras 1 linear .25s .65s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d14 {
+        .main__index .main__informacion ul li #d14 {
           animation: letras 1 linear .25s .70s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d15 {
+        .main__index .main__informacion ul li #d15 {
           animation: letras 1 linear .25s .75s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d16 {
+        .main__index .main__informacion ul li #d16 {
           animation: letras 1 linear .25s .80s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d17 {
+        .main__index .main__informacion ul li #d17 {
           animation: letras 1 linear .25s .85s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d18 {
+        .main__index .main__informacion ul li #d18 {
           animation: letras 1 linear .25s .90s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d19 {
+        .main__index .main__informacion ul li #d19 {
           animation: letras 1 linear .25s .95s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d20 {
+        .main__index .main__informacion ul li #d20 {
           animation: letras 1 linear .25s 1.00s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d21 {
+        .main__index .main__informacion ul li #d21 {
           animation: letras 1 linear .25s 1.05s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d22 {
+        .main__index .main__informacion ul li #d22 {
           animation: letras 1 linear .25s 1.10s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d23 {
+        .main__index .main__informacion ul li #d23 {
           animation: letras 1 linear .25s 1.15s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d24 {
+        .main__index .main__informacion ul li #d24 {
           animation: letras 1 linear .25s 1.20s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d25 {
+        .main__index .main__informacion ul li #d25 {
           animation: letras 1 linear .25s 1.25s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d26 {
+        .main__index .main__informacion ul li #d26 {
           animation: letras 1 linear .25s 1.30s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d27 {
+        .main__index .main__informacion ul li #d27 {
           animation: letras 1 linear .25s 1.35s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d28 {
+        .main__index .main__informacion ul li #d28 {
           animation: letras 1 linear .25s 1.40s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d29 {
+        .main__index .main__informacion ul li #d29 {
           animation: letras 1 linear .25s 1.45s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d30 {
+        .main__index .main__informacion ul li #d30 {
           animation: letras 1 linear .25s 1.50s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d31 {
+        .main__index .main__informacion ul li #d31 {
           animation: letras 1 linear .25s 1.55s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d32 {
+        .main__index .main__informacion ul li #d32 {
           animation: letras 1 linear .25s 1.60s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d33 {
+        .main__index .main__informacion ul li #d33 {
           animation: letras 1 linear .25s 1.65s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d34 {
+        .main__index .main__informacion ul li #d34 {
           animation: letras 1 linear .25s 1.70s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d35 {
+        .main__index .main__informacion ul li #d35 {
           animation: letras 1 linear .25s 1.75s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d36 {
+        .main__index .main__informacion ul li #d36 {
           animation: letras 1 linear .25s 1.80s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d37 {
+        .main__index .main__informacion ul li #d37 {
           animation: letras 1 linear .25s 1.85s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d38 {
+        .main__index .main__informacion ul li #d38 {
           animation: letras 1 linear .25s 1.90s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d39 {
+        .main__index .main__informacion ul li #d39 {
           animation: letras 1 linear .25s 1.90s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d40 {
+        .main__index .main__informacion ul li #d40 {
           animation: letras 1 ease-in .5s 2.00s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d41 {
+        .main__index .main__informacion ul li #d41 {
           animation: letras2 1 ease-in .5s 2.50s;
           animation-fill-mode: both; }
-        main .main__informacion ul li #d42 {
+        .main__index .main__informacion ul li #d42 {
           animation: letras3 1 ease-in .5s 3.00s;
           animation-fill-mode: both; }
-    main .main__informacion .main__informacion__profesion {
+    .main__index .main__informacion .main__informacion__profesion {
       width: 100%;
       display: flex;
-      justify-content: space-evenly; }
-      main .main__informacion .main__informacion__profesion img {
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      gap: 0; }
+      .main__index .main__informacion .main__informacion__profesion img {
         width: 6rem; }
-    main .main__informacion .main__informacion__idiomas {
+    .main__index .main__informacion .main__informacion__idiomas {
       width: 100%;
       display: flex;
-      justify-content: space-evenly; }
-      main .main__informacion .main__informacion__idiomas img {
+      flex-direction: row;
+      justify-content: space-evenly;
+      align-items: flex-start;
+      gap: 0; }
+      .main__index .main__informacion .main__informacion__idiomas img {
         padding-top: 10%;
         width: 3rem; }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  main {
+  .main__index {
     display: flex;
-    flex-direction: column; }
-  .main__principal {
-    margin-right: 0; }
-  .main__informacion {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0; }
+    .main__index .main__principal, .main__index .main__informacion {
+      margin-right: 0; }
+    .main__index .main__informacion {
+      margin-left: 0;
+      width: auto; } }
+
+/* BODY */
+.body__experience {
+  font-family: "Heebo";
+  background-image: url(../img/fondo.svg);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center; }
+
+/* MAIN */
+.main__experience {
+  max-width: 1440px;
+  margin: 0 var(--space-m) var(--space-m); }
+  .main__experience .subir {
+    position: -webkit-sticky;
+    position: sticky;
+    width: 40px;
+    top: 0;
     margin-left: 0;
+    top: 92vh;
+    padding: .5px;
+    border-radius: 12px;
+    background-color: #D9D9D9;
+    border: 2px solid #1f7a3a;
+    z-index: 1; }
+  .main__experience .tituloPagina {
+    height: var(--space-l);
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0; }
+    .main__experience .tituloPagina h1 {
+      font-weight: 400;
+      font-size: 2.5rem;
+      text-decoration: underline; }
+  .main__experience .experiencia {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--space-s); }
+    .main__experience .experiencia article {
+      background-color: #D9D9D9;
+      border-radius: 1.5rem;
+      width: 100%;
+      height: 30rem;
+      display: grid;
+      grid-template-columns: 2rem auto 2rem;
+      grid-template-rows: 2rem 6.25rem 2rem max-content auto 2.5rem 2rem;
+      gap: 0px 0px;
+      grid-template-areas: ". . ." ". imagen ." ". . ." ". titulo ." ". info ." ". boton ." ". . ."; }
+      .main__experience .experiencia article img {
+        grid-area: imagen;
+        height: 100%;
+        width: auto; }
+      .main__experience .experiencia article h2 {
+        grid-area: titulo;
+        font-size: 1.25rem; }
+      .main__experience .experiencia article p {
+        grid-area: info;
+        font-size: 1.1rem; }
+      .main__experience .experiencia article a {
+        grid-area: boton;
+        justify-self: end; }
+        .main__experience .experiencia article a:hover {
+          color: inherit;
+          font-weight: bolder; }
+        .main__experience .experiencia article a button {
+          width: 9rem;
+          height: 2.5rem;
+          background-color: #1f7a3a;
+          color: white;
+          font-weight: 300;
+          border-radius: 2rem;
+          text-decoration: none;
+          border: none; }
+  .main__experience .imagenes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 1rem;
+    margin: var(--space-m) 0; }
+    .main__experience .imagenes img {
+      width: 21%; }
+  .main__experience .descripcion {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--space-m); }
+    .main__experience .descripcion article {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 0;
+      background-color: #D9D9D9;
+      border-radius: 2rem; }
+      .main__experience .descripcion article h3 {
+        margin: var(--space-s) var(--space-s); }
+      .main__experience .descripcion article div {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: 0; }
+        .main__experience .descripcion article div img {
+          width: 15%;
+          align-self: flex-start;
+          margin: 0 var(--space-s) var(--space-m) var(--space-s); }
+        .main__experience .descripcion article div p {
+          margin: 0 var(--space-s) var(--space-s) 0;
+          text-align: justify; }
+
+/* RESPONSIVE */
+@media (max-width: 1190px) {
+  .main__experience .experiencia {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: var(--space-s); }
+    .main__experience .experiencia article {
+      height: 15rem;
+      display: grid;
+      grid-template-columns: 2rem 13rem auto 2rem;
+      grid-template-rows: 2rem max-content auto 2.5rem 2rem;
+      gap: 0px 0px;
+      grid-template-areas: ". . . ." ". imagen titulo ." ". imagen info ." ". imagen boton ." ". . . ."; }
+      .main__experience .experiencia article img {
+        height: 6.25rem;
+        width: auto; } }
+
+@media (max-width: 800px) {
+  :root {
+    --space-l: 100px;
+    --space-m: 33px;
+    --space-s: 33px; }
+  .main__experience .experiencia article img {
+    height: 5rem;
     width: auto; } }
+
+@media (max-width: 576px) {
+  .tituloPagina {
+    justify-content: center; }
+  .main__experience .experiencia article {
+    height: 30rem;
+    display: grid;
+    grid-template-columns: 2rem auto 2rem;
+    grid-template-rows: 2rem 6.25rem 2rem max-content auto 2.5rem 2rem;
+    gap: 0px 0px;
+    grid-template-areas: ". . ." ". imagen ." ". . ." ". titulo ." ". info ." ". boton ." ". . ."; }
+    .main__experience .experiencia article img {
+      height: 100%;
+      width: auto; }
+  .main__experience .imagenes {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1rem; }
+    .main__experience .imagenes img {
+      width: 60%; }
+  .main__experience .descripcion article div {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+    padding-left: var(--space-s); }
+    .main__experience .descripcion article div img {
+      width: 40%;
+      align-self: center; } }
