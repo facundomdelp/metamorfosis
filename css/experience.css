@@ -280,13 +280,13 @@ h1 {
 
 /* FOOTER */
 
-.footer {
+footer {
     background-image: linear-gradient(to right,  rgb(70, 70, 70),var(--terciary));
     color: white;
     width: 100%;
 }
 
-.footer__list {
+footer ul {
     display: flex;
     align-items: center;
     justify-content: left;
@@ -295,12 +295,12 @@ h1 {
     margin: auto;
 }
 
-.footer__item {
+footer li {
     font-size: 1rem;
     padding: 0 1rem;
 }
 
-.footer__item a:hover {
+footer a:hover {
     color: inherit;
 }
 
