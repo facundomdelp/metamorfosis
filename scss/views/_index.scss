@@ -148,7 +148,7 @@
 @media(max-width: 768px) {
     
     .main__index {
-        @include flex(column, flex-start, flex-start, 0);
+        @include flex(column, flex-start, center, 0);
 
         .main__principal {
             margin-right: 0;
