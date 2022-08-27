@@ -9,12 +9,15 @@ header {
         @include flex(row, space-between, flex-start, 0);
         margin: auto;
 
-        img {
-            width: 25%;
+        a {
+            width: 20%;
             height: auto;
-            max-width: 8rem;
+            max-width: 10rem;
             min-width: 7rem;
-            margin: .75rem 0;
+
+                img {
+                    padding: 0.25rem 0;
+                }
         }
 
         ul {
@@ -27,6 +30,7 @@ header {
                 text-align: center;
 
                 a {
+                    width: 100%;
                     color: map-get($pallete, secondary);
 
                     &:hover {

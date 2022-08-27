@@ -86,11 +86,14 @@ body {
 }
 
 #logo {
-    width: 25%;
+    width: 20%;
     height: auto;
-    max-width: 8rem;
+    max-width: 10rem;
     min-width: 7rem;
-    margin: .75rem 0;
+}
+
+#logo img {
+    padding: 0.25rem 0;
 }
 
 .header__list {
@@ -235,11 +238,11 @@ footer ul {
     max-width: 1440px;
     width: 100%;
     margin: auto;
+    padding-left: 0;
 }
 
 footer li {
     font-size: 1rem;
-    padding: 0 1rem;
 }
 
 footer a:hover {
@@ -249,7 +252,7 @@ footer a:hover {
 #logoLinkedin {
     display: flex;
     align-self: center;
-    margin: 0.5rem 0;
+    padding: 0.5rem 1rem 0.5rem 0;
 }
 
 /* RESPONSIVE */
