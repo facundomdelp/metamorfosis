@@ -269,7 +269,7 @@ footer a:hover {
 #logoLinkedin {
     display: flex;
     align-self: center;
-    padding: 0.5rem 1rem 0.5rem 0;
+    padding: .5rem 1.5rem .5rem .75rem;
 }
 
 /* RESPONSIVE */

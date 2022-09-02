@@ -144,7 +144,7 @@ body {
 
 main {
     max-width: 1440px;
-    margin: 0 calc(2*var(--space-l)) var(--space-s);
+    margin: 0 5% var(--space-s);
 }
 
 .tituloPagina {
@@ -207,12 +207,22 @@ h1 {
     margin-bottom: var(--space-s);
 }
 
-.grillaDesktop p{
+p {
+    font-family: var(--text-alt);
+}
+
+strong {
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.grillaDesktop p {
     background-color: var(--primary);
     margin-bottom: var(--space-s);
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: .75rem;
     font-size: 1rem;
+    text-align: justify;
 }
 
 .grillaTablet {
@@ -252,7 +262,7 @@ footer a:hover {
 #logoLinkedin {
     display: flex;
     align-self: center;
-    padding: 0.5rem 1rem 0.5rem 0;
+    padding: .5rem 1.5rem .5rem .75rem;
 }
 
 /* RESPONSIVE */
@@ -260,7 +270,7 @@ footer a:hover {
 @media(max-width: 1440px) {
 
     main {
-        margin: 0 var(--space-l) var(--space-s);
+        margin: 0 5% var(--space-s);
     }
 
 }
@@ -268,13 +278,8 @@ footer a:hover {
 @media(max-width: 1200px) {
 
     main {
-        margin: 0 var(--space-m) var(--space-s);
+        margin: 0 3% var(--space-s);
     }
-
-}
-
-
-@media(max-width: 800px) {
 
     .grillaDesktop {
         display: none;
@@ -354,12 +359,11 @@ footer a:hover {
         margin-bottom: var(--space-s);
     }
     
-    .grillaTablet1 p{
+    .grillaTablet1 p {
         background-color: var(--primary);
         margin-bottom: var(--space-s);
         padding: 1rem;
         border-radius: .75rem;
-        font-size: 1.15rem;
     }
 
     .grillaTablet2 div {
@@ -373,12 +377,12 @@ footer a:hover {
         margin-bottom: var(--space-s);
         padding: 1rem;
         border-radius: .75rem;
-        font-size: 1.15rem;
     }
 
 }
 
 @media(max-width:640px) {
+
 
     .tituloPagina {
         margin: var(--space-s) 0;
@@ -394,10 +398,6 @@ footer a:hover {
         text-align: center;
         font-family: var(--text-alt);
     }
-
-    }
-
-@media(max-width: 425px) {
 
     main {
         margin: 0 var(--space-s) var(--space-s);
@@ -423,7 +423,6 @@ footer a:hover {
         margin-bottom: var(--space-s);
         padding: 1rem;
         border-radius: .75rem;
-        font-size: 1.15rem;
     }
 
 }

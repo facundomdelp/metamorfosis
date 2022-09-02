@@ -172,12 +172,13 @@ footer {
     margin: auto;
     padding-left: 0; }
     footer ul li {
-      font-size: 1rem;
-      margin: 0 1rem; }
+      font-size: 1rem; }
       footer ul li a:hover {
         color: inherit; }
       footer ul li #logoLinkedin {
-        padding: 0.5rem 0; }
+        display: flex;
+        align-self: center;
+        padding: .5rem 1.5rem .5rem .75rem; }
 
 /* VIEWS */
 /* BODY */
