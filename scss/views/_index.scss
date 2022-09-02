@@ -59,8 +59,8 @@
         @extend .main__principal;
         text-align: left;
         width: 24rem;
-        justify-content: space-evenly;
-        margin-bottom: 2rem;
+        justify-content: center;
+        margin-top: 2rem;
 
         ul {
             @include flex(column, space-between, flex-start, 0);
@@ -127,7 +127,7 @@
             @include flex(row, space-evenly, flex-start, 0);
 
             img {
-                width:6rem;
+                width:4.5rem;
             }
         }
 
@@ -136,8 +136,7 @@
             @include flex(row, space-evenly, flex-start, 0);
 
             img {
-                padding-top: 10%;
-                width: 3rem;
+                width: 2rem;
             }
         }
     }
@@ -157,6 +156,7 @@
         .main__informacion {
             margin-left: 0;
             width: auto;
+            margin-bottom: 2rem;            
         }
     }
 }

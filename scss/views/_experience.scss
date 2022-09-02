@@ -40,6 +40,10 @@
         }
     }
 
+    .carousel {
+        display:none;
+    }
+
     .experiencia {
         @include flex(row, flex-start, flex-start, var(--space-s));
 
@@ -201,29 +205,14 @@
 
     .main__experience {
 
+        .carousel {
+            display: block;
+        }
+
         .experiencia {
 
-            article {
-    
-                height: 30rem;
-                display: grid; 
-                grid-template-columns: 2rem auto 2rem; 
-                grid-template-rows: 2rem 6.25rem 2rem max-content auto 2.5rem 2rem; 
-                gap: 0px 0px; 
-                grid-template-areas: 
-                ". . ."
-                ". imagen ."
-                ". . ."
-                ". titulo ."
-                ". info ."
-                ". boton ."
-                ". . ."; 
-    
-                img {
-                    height:100%;
-                    width: auto;
-                }
-            }
+            display: none;
+
         }
 
         .imagenes {

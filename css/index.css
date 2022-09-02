@@ -231,8 +231,8 @@ footer {
   .main__index .main__informacion {
     text-align: left;
     width: 24rem;
-    justify-content: space-evenly;
-    margin-bottom: 2rem; }
+    justify-content: center;
+    margin-top: 2rem; }
     .main__index .main__informacion ul {
       display: flex;
       flex-direction: column;
@@ -383,7 +383,7 @@ footer {
       align-items: flex-start;
       gap: 0; }
       .main__index .main__informacion .main__informacion__profesion img {
-        width: 6rem; }
+        width: 4.5rem; }
     .main__index .main__informacion .main__informacion__idiomas {
       width: 100%;
       display: flex;
@@ -392,8 +392,7 @@ footer {
       align-items: flex-start;
       gap: 0; }
       .main__index .main__informacion .main__informacion__idiomas img {
-        padding-top: 10%;
-        width: 3rem; }
+        width: 2rem; }
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
@@ -407,7 +406,8 @@ footer {
       margin-right: 0; }
     .main__index .main__informacion {
       margin-left: 0;
-      width: auto; } }
+      width: auto;
+      margin-bottom: 2rem; } }
 
 /* BODY */
 .body__experience {
@@ -445,6 +445,8 @@ footer {
       font-weight: 400;
       font-size: 2.5rem;
       text-decoration: underline; }
+  .main__experience .carousel {
+    display: none; }
   .main__experience .experiencia {
     display: flex;
     flex-direction: row;
@@ -556,16 +558,10 @@ footer {
 @media (max-width: 576px) {
   .tituloPagina {
     justify-content: center; }
-  .main__experience .experiencia article {
-    height: 30rem;
-    display: grid;
-    grid-template-columns: 2rem auto 2rem;
-    grid-template-rows: 2rem 6.25rem 2rem max-content auto 2.5rem 2rem;
-    gap: 0px 0px;
-    grid-template-areas: ". . ." ". imagen ." ". . ." ". titulo ." ". info ." ". boton ." ". . ."; }
-    .main__experience .experiencia article img {
-      height: 100%;
-      width: auto; }
+  .main__experience .carousel {
+    display: block; }
+  .main__experience .experiencia {
+    display: none; }
   .main__experience .imagenes {
     display: flex;
     flex-direction: column;
