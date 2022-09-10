@@ -58,18 +58,6 @@ strong {
   100% {
     transform: translateX(0); } }
 
-@keyframes letras3 {
-  0% {
-    opacity: 0;
-    transform: translateX(250px); }
-  60% {
-    opacity: 1;
-    transform: translateX(-30px); }
-  80% {
-    transform: translateX(10px); }
-  100% {
-    transform: translateX(0); } }
-
 @keyframes iconitos {
   70% {
     transform: translateY(0%); }
@@ -156,6 +144,11 @@ header {
           left: 0;
           text-align: center;
           width: 100%; }
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+  header .header__nav ul {
+    flex-direction: column; } }
 
 footer {
   background-image: linear-gradient(to right, #464646, #6D6D6D);
@@ -373,7 +366,7 @@ footer {
           animation: letras2 1 ease-in .5s 2.50s;
           animation-fill-mode: both; }
         .main__index .main__informacion ul li #d42 {
-          animation: letras3 1 ease-in .5s 3.00s;
+          animation: letras2 1 ease-in .5s 3.00s;
           animation-fill-mode: both; }
     .main__index .main__informacion .main__informacion__profesion {
       width: 100%;
